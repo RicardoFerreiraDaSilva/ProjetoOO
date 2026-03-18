@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PizzariaFramework")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a3b4f5fd33fb9384b964fec032f53de08f4f17b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2151c94ef7d68ac52acfc0015f1ba3a21e18b2ca")]
 [assembly: System.Reflection.AssemblyProductAttribute("PizzariaFramework")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PizzariaFramework")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

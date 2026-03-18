@@ -1,13 +1,14 @@
+using PizzariaFramework.Models; 
+
 namespace PizzariaApp.Models;
 
-public class Pizza
+public class Pizza : EntidadeBase
 {
-    public int Id { get; set; }
+    
     public string Nome { get; set; } = string.Empty;
     public decimal Preco { get; set; }
     public string Tamanho { get; set; } = "Média";
 
-    // Construtor vazio é importante para frameworks de banco de dados
     public Pizza() { }
 
     public Pizza(string nome, decimal preco, string tamanho)
@@ -17,9 +18,9 @@ public class Pizza
         Tamanho = tamanho;
     }
 
-    // Sobrescrever o ToString ajuda na hora de listar no Console
     public override string ToString()
     {
+        // O Id continua funcionando aqui porque foi herdado!
         return $"[{Id}] {Nome} ({Tamanho}) - R$ {Preco:F2}";
     }
 }

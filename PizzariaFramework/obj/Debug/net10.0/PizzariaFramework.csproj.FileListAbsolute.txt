@@ -1,0 +1,13 @@
+C:\Users\dasil\TrabalhoPizzaria\PizzariaFramework\bin\Debug\net10.0\PizzariaFramework.deps.json
+C:\Users\dasil\TrabalhoPizzaria\PizzariaFramework\bin\Debug\net10.0\PizzariaFramework.dll
+C:\Users\dasil\TrabalhoPizzaria\PizzariaFramework\bin\Debug\net10.0\PizzariaFramework.pdb
+C:\Users\dasil\TrabalhoPizzaria\PizzariaFramework\obj\Debug\net10.0\PizzariaFramework.csproj.AssemblyReference.cache
+C:\Users\dasil\TrabalhoPizzaria\PizzariaFramework\obj\Debug\net10.0\PizzariaFramework.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dasil\TrabalhoPizzaria\PizzariaFramework\obj\Debug\net10.0\PizzariaFramework.AssemblyInfoInputs.cache
+C:\Users\dasil\TrabalhoPizzaria\PizzariaFramework\obj\Debug\net10.0\PizzariaFramework.AssemblyInfo.cs
+C:\Users\dasil\TrabalhoPizzaria\PizzariaFramework\obj\Debug\net10.0\PizzariaFramework.csproj.CoreCompileInputs.cache
+C:\Users\dasil\TrabalhoPizzaria\PizzariaFramework\obj\Debug\net10.0\PizzariaFramework.sourcelink.json
+C:\Users\dasil\TrabalhoPizzaria\PizzariaFramework\obj\Debug\net10.0\PizzariaFramework.dll
+C:\Users\dasil\TrabalhoPizzaria\PizzariaFramework\obj\Debug\net10.0\refint\PizzariaFramework.dll
+C:\Users\dasil\TrabalhoPizzaria\PizzariaFramework\obj\Debug\net10.0\PizzariaFramework.pdb
+C:\Users\dasil\TrabalhoPizzaria\PizzariaFramework\obj\Debug\net10.0\ref\PizzariaFramework.dll
