@@ -2,24 +2,32 @@
 using PizzariaFramework.Data;
 using Microsoft.Data.Sqlite;
 
-// --- Configuração Inicial do Banco (O Framework deveria automatizar isso, mas vamos manter simples agora) ---
+// 1. Setup do Banco (Garantindo que as tabelas existam para o framework usar)
 using (var conn = DatabaseConfig.GetConnection())
 {
     var cmd = conn.CreateCommand();
+    // Tabela de Pizzas
     cmd.CommandText = "CREATE TABLE IF NOT EXISTS Pizza (Id INTEGER PRIMARY KEY AUTOINCREMENT, Nome TEXT, Preco DECIMAL, Tamanho TEXT)";
+    cmd.ExecuteNonQuery();
+    // Tabela de Bebidas (O NOME DA TABELA DEVE SER IGUAL AO DA CLASSE)
+    cmd.CommandText = "CREATE TABLE IF NOT EXISTS Bebida (Id INTEGER PRIMARY KEY AUTOINCREMENT, Nome TEXT, Preco DECIMAL, Litragem TEXT)";
     cmd.ExecuteNonQuery();
 }
 
+// 2. Instanciando os DAOs (O mesmo motor para modelos diferentes!)
 var pizzaDao = new BaseDAO<Pizza>();
-bool executando = true;
+var bebidaDao = new BaseDAO<Bebida>();
 
+bool executando = true;
 Console.WriteLine("=== SISTEMA DE PIZZARIA (FRAMEWORK XYZ) ===");
 
 while (executando)
 {
     Console.WriteLine("\nEscolha uma opção:");
     Console.WriteLine("1. Cadastrar Pizza");
-    Console.WriteLine("2. Listar Cardápio");
+    Console.WriteLine("2. Listar Cardápio de Pizzas");
+    Console.WriteLine("3. Cadastrar Bebida");
+    Console.WriteLine("4. Listar Bebidas");
     Console.WriteLine("0. Sair");
     Console.Write("Opção: ");
 
@@ -28,39 +36,42 @@ while (executando)
     switch (opcao)
     {
         case "1":
+            // ... (seu código de cadastrar pizza continua igual)
             Console.Write("Nome da Pizza: ");
-            string nome = Console.ReadLine() ?? "";
-            
+            string nomeP = Console.ReadLine() ?? "";
             Console.Write("Preço: ");
-            decimal preco = decimal.Parse(Console.ReadLine() ?? "0");
-            
-            Console.Write("Tamanho (P/M/G): ");
-            string tamanho = Console.ReadLine() ?? "";
-
-            var novaPizza = new Pizza(nome, preco, tamanho);
-            pizzaDao.Inserir(novaPizza);
-            
-            Console.WriteLine("✅ Pizza salva com sucesso via Framework!");
+            decimal precoP = decimal.Parse(Console.ReadLine() ?? "0");
+            Console.Write("Tamanho: ");
+            string tamP = Console.ReadLine() ?? "";
+            pizzaDao.Inserir(new Pizza(nomeP, precoP, tamP));
+            Console.WriteLine("✅ Pizza salva!");
             break;
 
         case "2":
-            Console.WriteLine("\n--- CARDÁPIO ATUAL ---");
-            var lista = pizzaDao.ListarTodos();
-            if (lista.Count == 0) Console.WriteLine("Nenhuma pizza cadastrada.");
-            foreach (var p in lista)
-            {
-                Console.WriteLine(p);
-            }
+            Console.WriteLine("\n--- PIZZAS ---");
+            pizzaDao.ListarTodos().ForEach(p => Console.WriteLine(p));
+            break;
+
+        case "3": // NOVA OPÇÃO
+            Console.Write("Nome da Bebida: ");
+            string nomeB = Console.ReadLine() ?? "";
+            Console.Write("Preço: ");
+            decimal precoB = decimal.Parse(Console.ReadLine() ?? "0");
+            Console.Write("Litragem (ex: 2L, 350ml): ");
+            string litros = Console.ReadLine() ?? "";
+            
+            // Usando o DAO de Bebida!
+            bebidaDao.Inserir(new Bebida(nomeB, precoB, litros));
+            Console.WriteLine("✅ Bebida salva!");
+            break;
+
+        case "4": // NOVA OPÇÃO
+            Console.WriteLine("\n--- BEBIDAS ---");
+            bebidaDao.ListarTodos().ForEach(b => Console.WriteLine(b));
             break;
 
         case "0":
             executando = false;
             break;
-
-        default:
-            Console.WriteLine("Opção inválida!");
-            break;
     }
 }
-
-Console.WriteLine("Encerrando sistema...");
