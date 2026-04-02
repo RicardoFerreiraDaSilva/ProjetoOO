@@ -28,6 +28,8 @@ while (executando)
     Console.WriteLine("2. Listar Cardápio de Pizzas");
     Console.WriteLine("3. Cadastrar Bebida");
     Console.WriteLine("4. Listar Bebidas");
+    Console.WriteLine("5. Remover Pizza (por ID)"); 
+    Console.WriteLine("6. Remover Bebida (por ID)");
     Console.WriteLine("0. Sair");
     Console.Write("Opção: ");
 
@@ -70,6 +72,23 @@ while (executando)
             bebidaDao.ListarTodos().ForEach(b => Console.WriteLine(b));
             break;
 
+        case "5": // OPÇÃO: REMOVER PIZZA
+            Console.Write("Digite o ID da Pizza que deseja remover: ");
+            if (int.TryParse(Console.ReadLine(), out int idPizza))
+            {
+                pizzaDao.Excluir(idPizza);
+                Console.WriteLine("🗑️ Pizza removida com sucesso!");
+            }
+            break;
+
+        case "6": // OPÇÃO: REMOVER BEBIDA
+            Console.Write("Digite o ID da Bebida que deseja remover: ");
+            if (int.TryParse(Console.ReadLine(), out int idBebida))
+            {
+                bebidaDao.Excluir(idBebida);
+                Console.WriteLine("🗑️ Bebida removida com sucesso!");
+            }
+            break;
         case "0":
             executando = false;
             break;
