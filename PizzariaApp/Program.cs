@@ -74,43 +74,19 @@ void MenuOperacoes(string nome, dynamic dao)
             if (lista.Count == 0) Console.WriteLine("Nenhum registro encontrado.");
             foreach (var item in lista) Console.WriteLine(item);
         }
-        else if (op == "2")
-        {
-            if (nome == "Funcionario") 
-            {
-                Console.Write("Nome do Funcionário: "); string n = Console.ReadLine()!;
-                Console.Write("Cargo: "); string c = Console.ReadLine()!;
-                dao.Inserir(new Funcionario(n, c));
-            } 
-            else 
-            {
-                Console.Write("Nome: "); string n = Console.ReadLine() ?? "";
-                Console.Write("Preço: "); decimal p = decimal.Parse(Console.ReadLine() ?? "0");
+        else if (op == "2") // Cadastro Genérico
+{
+    // 1. Descobrimos qual é o tipo de classe que o DAO está usando
+    // (ex: Se for BaseDAO<Pizza>, o tipo será Pizza)
+    Type tipoDoObjeto = dao.GetType().GetGenericArguments()[0];
 
-                if (nome == "Pizza") {
-                    Console.Write("Tamanho: "); string t = Console.ReadLine() ?? "";
-                    dao.Inserir(new Pizza(n, p, t));
-                } 
-                else if (nome == "Bebida") {
-                    Console.Write("Litragem: "); string l = Console.ReadLine() ?? "";
-                    dao.Inserir(new Bebida(n, p, l));
-                }
-                else if (nome == "Sobremesa") {
-                    Console.Write("É Vegana? (S/N): "); 
-                    bool v = (Console.ReadLine() ?? "").ToUpper() == "S";
-                    dao.Inserir(new Sobremesa(n, p, v));
-                }
-            }
-            Console.WriteLine("✅ Cadastrado com sucesso!");
-        }
-        else if (op == "3")
-        {
-            Console.Write("Digite o ID para remover: ");
-            if (int.TryParse(Console.ReadLine(), out int id))
-            {
-                dao.Excluir(id);
-                Console.WriteLine("🗑️ Removido!");
-            }
-        }
-    }
+    // 2. O Framework faz as perguntas e cria o objeto sozinho
+    var novoObjeto = MenuEngine.PreencherObjetoDinamico(tipoDoObjeto);
+
+    // 3. O DAO salva no banco
+    dao.Inserir((dynamic)novoObjeto);
+
+    Console.WriteLine($"\n✅ {nome} cadastrado com sucesso via Framework!");
+}
+}
 }
