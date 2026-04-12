@@ -1,3 +1,9 @@
+C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\obj\Debug\net10.0\PizzariaApp.csproj.AssemblyReference.cache
+C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\obj\Debug\net10.0\PizzariaApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\obj\Debug\net10.0\PizzariaApp.AssemblyInfoInputs.cache
+C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\obj\Debug\net10.0\PizzariaApp.AssemblyInfo.cs
+C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\obj\Debug\net10.0\PizzariaApp.csproj.CoreCompileInputs.cache
+C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\obj\Debug\net10.0\PizzariaApp.sourcelink.json
 C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\bin\Debug\net10.0\PizzariaApp.exe
 C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\bin\Debug\net10.0\PizzariaApp.deps.json
 C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\bin\Debug\net10.0\PizzariaApp.runtimeconfig.json
@@ -32,12 +38,6 @@ C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\bin\Debug\net10.0\runtimes\win-x64\n
 C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\bin\Debug\net10.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\bin\Debug\net10.0\PizzariaFramework.dll
 C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\bin\Debug\net10.0\PizzariaFramework.pdb
-C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\obj\Debug\net10.0\PizzariaApp.csproj.AssemblyReference.cache
-C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\obj\Debug\net10.0\PizzariaApp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\obj\Debug\net10.0\PizzariaApp.AssemblyInfoInputs.cache
-C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\obj\Debug\net10.0\PizzariaApp.AssemblyInfo.cs
-C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\obj\Debug\net10.0\PizzariaApp.csproj.CoreCompileInputs.cache
-C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\obj\Debug\net10.0\PizzariaApp.sourcelink.json
 C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\obj\Debug\net10.0\Pizzaria.8BBA45A7.Up2Date
 C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\obj\Debug\net10.0\PizzariaApp.dll
 C:\Users\dasil\TrabalhoPizzaria\PizzariaApp\obj\Debug\net10.0\refint\PizzariaApp.dll

@@ -1,4 +1,4 @@
-namespace PizzariaFramework.Interfaces;
+namespace GenericFramework.Interfaces;
 
 // O <T> permite que esse DAO sirva para Pizzas, Bebidas ou Pedidos
 public interface IGenericDAO<T> where T : class

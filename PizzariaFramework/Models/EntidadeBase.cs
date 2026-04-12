@@ -1,4 +1,4 @@
-namespace PizzariaFramework.Models;
+namespace GenericFramework.Models;
 
 public abstract class EntidadeBase
 {

@@ -1,6 +1,6 @@
 using Microsoft.Data.Sqlite;
 
-namespace PizzariaFramework.Data;
+namespace GenericFramework.Data;
 
 public static class DatabaseConfig
 {

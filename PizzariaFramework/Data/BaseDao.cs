@@ -1,9 +1,9 @@
 using System.Reflection;
 using Microsoft.Data.Sqlite;
-using PizzariaFramework.Interfaces;
-using PizzariaFramework.Models;
+using GenericFramework.Interfaces; 
+using GenericFramework.Models;
 
-namespace PizzariaFramework.Data;
+namespace GenericFramework.Data;
 
 public class BaseDAO<T> : IGenericDAO<T> where T : EntidadeBase, new()
 {

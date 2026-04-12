@@ -1,4 +1,4 @@
-using PizzariaFramework.Models; 
+using GenericFramework.Models;
 
 namespace PizzariaApp.Models;
 

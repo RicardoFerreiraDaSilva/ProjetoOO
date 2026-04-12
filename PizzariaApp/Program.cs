@@ -1,7 +1,7 @@
 ﻿using PizzariaApp.Models;
-using PizzariaFramework.Data;
-using PizzariaFramework.Interfaces;
-using PizzariaFramework.Models;
+using GenericFramework.Data;
+using GenericFramework.Interfaces;
+using GenericFramework.Models;
 using Microsoft.Data.Sqlite;
 
 // 1. SETUP DO BANCO (Cria as tabelas se não existirem)
@@ -31,7 +31,7 @@ var daos = new Dictionary<string, object>
 };
 
 bool executando = true;
-Console.WriteLine("=== SISTEMA GESTOR (FRAMEWORK XYZ) ===");
+Console.WriteLine("=== SISTEMA GESTOR (FRAMEWORK) ===");
 
 while (executando)
 {
